@@ -30,5 +30,18 @@ body {
 
   /* align content */
   text-align: center;
-  line-height: 20vh;
+  line-height: 21vh;
+}
+
+.card-flipped {
+  /* colors */
+  background-color: #824d17;
+  color: #d6a26e;
+
+  /* shadow */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.603);
+
+  /* spacing/sizing */
+  margin-left: 2%;
+  margin-right: 2%;
 }
