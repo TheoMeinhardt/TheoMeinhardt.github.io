@@ -1,0 +1,32 @@
+body {
+  /* colors/fonts */
+  background-color: #60688d;
+  font-family: monospace;
+  font-size: 3.5vh;
+}
+
+.deck {
+  /* flexbox */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  /* spacing/sizing */
+  width: 45vw;
+  margin: auto;
+}
+
+.card {
+  /* colors */
+  background-color: #172357;
+  color: #60688d;
+
+  /* spacing/sizing */
+  width: 22%;
+  height: 22%;
+  margin: 1%;
+
+  /* align content */
+  text-align: center;
+  line-height: 20vh;
+}
