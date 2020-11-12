@@ -3,6 +3,7 @@ body {
   background-color: #60688d;
   font-family: monospace;
   font-size: 3.5vh;
+  font-weight: bold;
 }
 
 .deck {
@@ -19,7 +20,7 @@ body {
 .card {
   /* colors */
   background-color: #172357;
-  color: #60688d;
+  color: #7d87af;
 
   /* spacing/sizing */
   width: 22%;
