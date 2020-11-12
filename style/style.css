@@ -13,7 +13,8 @@ body {
   justify-content: center;
 
   /* spacing/sizing */
-  width: 45vw;
+  width: 92vh;
+  height: 92vh;
   margin: auto;
 }
 
