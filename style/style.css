@@ -21,7 +21,8 @@ body {
 .card {
   /* colors */
   background-color: #172357;
-  color: #7d87af;
+  color: #172357;
+  /*color: #7d87af;*/
 
   /* spacing/sizing */
   width: 22%;
@@ -35,8 +36,8 @@ body {
 
 .card-flipped {
   /* colors */
-  background-color: #824d17;
-  color: #d6a26e;
+  background-color: #e37a12;
+  color: #ffc78f;
 
   /* shadow */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.603);
@@ -44,4 +45,9 @@ body {
   /* spacing/sizing */
   margin-left: 2%;
   margin-right: 2%;
+}
+
+.card-matched {
+  /* Hide card */
+  opacity: 0;
 }
