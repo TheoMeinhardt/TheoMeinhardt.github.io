@@ -59,12 +59,14 @@ for (let i = 0; i < allCards.length; i++) {
             item.classList.add("card-matched");
             item.classList.remove("card-flipped");
           });
+
+          allFlippedCards = [];
         }
-        allFlippedCards = [];
       }
     } else if (c.classList.contains("card-flipped")) {
       c.classList.remove("card-flipped");
-      allFlippedCards.pop(c);
+      allFlippedCards.pop();
+      console.log("test");
     }
   });
 }
