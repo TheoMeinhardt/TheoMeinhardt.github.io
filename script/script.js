@@ -1,3 +1,12 @@
+function buildCards() {
+  const container = document.querySelector("#card-deck");
+  for (let i = 0; i < 16; i++) {
+    let newCard = document.createElement("div");
+    newCard.classList.add("card");
+    container.appendChild(newCard);
+  }
+}
+
 function buildPairs() {
   let card;
   let usedCards = [];
@@ -27,10 +36,11 @@ function labelPairs() {
   }
 }
 
-const allCards = document.querySelectorAll(".card");
 let allFlippedCards = [];
 let pairs = [];
 
+buildCards();
+const allCards = document.querySelectorAll(".card");
 buildPairs();
 
 // flip/unflip cards
