@@ -6,6 +6,25 @@ body {
   font-weight: bold;
 }
 
+.info-bar {
+  /* spacing/sizing */
+  float: left;
+  width: 23vh;
+  margin-left: 40vh;
+}
+
+.info-bar > div {
+  /* spacing/sizing */
+  padding: 5%;
+  text-align: center;
+  margin: 1vh 0vh 1vh 1vh;
+
+  /* colors/design */
+  color: #2f3d74;
+  background-color: #858ba7;
+  border-radius: 15px;
+}
+
 .deck {
   /* flexbox */
   display: flex;
@@ -15,7 +34,6 @@ body {
   /* spacing/sizing */
   width: 92vh;
   height: 92vh;
-  margin: auto;
 }
 
 .card {

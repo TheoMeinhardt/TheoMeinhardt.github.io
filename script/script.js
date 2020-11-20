@@ -48,7 +48,11 @@ for (let i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", function (e) {
     let c = allCards[i];
 
-    if (!c.classList.contains("card-flipped") && allFlippedCards.length < 2) {
+    if (
+      !c.classList.contains("card-flipped") &&
+      allFlippedCards.length < 2 &&
+      !c.classList.contains("card-matched")
+    ) {
       c.classList.add("card-flipped");
       allFlippedCards.push(c);
 
