@@ -11,6 +11,15 @@ body {
   justify-content: center;
 }
 
+.calculator-Link {
+  /* spacing/sizing*/
+  font-size: 3vh;
+
+  /* design */
+  color: #2f3d74;
+  text-decoration: none;
+}
+
 .info-bar > div {
   /* spacing/sizing */
   padding: 5%;
