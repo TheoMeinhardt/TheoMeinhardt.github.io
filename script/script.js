@@ -1,6 +1,15 @@
 function timer() {
   s++;
 
+  if (matchedCards.length == 16) {
+    started = false;
+    clearInterval(TimerIntervall);
+    highscore = m * 60 + s;
+    if (highscore < m * 60 + s) {
+      highscoreLabel.innerHTML = `${m}:${s}`;
+    }
+  }
+
   if (s > 60) {
     s = 0;
     m++;
@@ -55,6 +64,8 @@ let allFlippedCards = [];
 let pairs = [];
 let matchedCards = [];
 let started = false;
+let highscore = 99999;
+let highscoreLabel = document.querySelector(".highscore");
 const timerLabel = document.querySelector(".timer");
 const startButton = document.querySelector(".start-button");
 
@@ -64,38 +75,39 @@ buildPairs();
 
 startButton.addEventListener("click", function () {
   started = true;
-  setInterval(timer, 1000);
+  let TimerIntervall = setInterval(timer, 1000);
 });
 
 // flip/unflip cards
 for (let i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", function (e) {
     let c = allCards[i];
+    if (started == true) {
+      if (
+        !c.classList.contains("card-flipped") &&
+        allFlippedCards.length < 2 &&
+        !c.classList.contains("card-matched")
+      ) {
+        c.classList.add("card-flipped");
+        allFlippedCards.push(c);
 
-    if (
-      !c.classList.contains("card-flipped") &&
-      allFlippedCards.length < 2 &&
-      !c.classList.contains("card-matched")
-    ) {
-      c.classList.add("card-flipped");
-      allFlippedCards.push(c);
+        // check if pair
+        if (allFlippedCards.length == 2) {
+          if (allFlippedCards[0].innerHTML == allFlippedCards[1].innerHTML) {
+            allFlippedCards.forEach((item) => {
+              matchedCards.push(item);
+              item.classList.add("card-matched");
+              item.classList.remove("card-flipped");
+            });
 
-      // check if pair
-      if (allFlippedCards.length == 2) {
-        if (allFlippedCards[0].innerHTML == allFlippedCards[1].innerHTML) {
-          allFlippedCards.forEach((item) => {
-            matchedCards.push(item);
-            item.classList.add("card-matched");
-            item.classList.remove("card-flipped");
-          });
-
-          allFlippedCards = [];
+            allFlippedCards = [];
+          }
         }
+      } else if (c.classList.contains("card-flipped")) {
+        c.classList.remove("card-flipped");
+        allFlippedCards.pop();
+        console.log("test");
       }
-    } else if (c.classList.contains("card-flipped")) {
-      c.classList.remove("card-flipped");
-      allFlippedCards.pop();
-      console.log("test");
     }
   });
 }
