@@ -69,9 +69,15 @@ body {
   /* spacing/sizing */
   margin-left: 2%;
   margin-right: 2%;
+
+  /* flip-animation */
+  transition: 0.5s ease-in-out;
 }
 
 .card-matched {
   /* Hide card */
   opacity: 0;
+
+  /* flip-animation */
+  transition: 0.5s ease-in-out;
 }
