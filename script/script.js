@@ -53,6 +53,7 @@ let s = 0;
 
 let allFlippedCards = [];
 let pairs = [];
+let matchedCards = [];
 let started = false;
 const timerLabel = document.querySelector(".timer");
 const startButton = document.querySelector(".start-button");
@@ -83,6 +84,7 @@ for (let i = 0; i < allCards.length; i++) {
       if (allFlippedCards.length == 2) {
         if (allFlippedCards[0].innerHTML == allFlippedCards[1].innerHTML) {
           allFlippedCards.forEach((item) => {
+            matchedCards.push(item);
             item.classList.add("card-matched");
             item.classList.remove("card-flipped");
           });

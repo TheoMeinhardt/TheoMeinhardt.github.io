@@ -56,6 +56,9 @@ body {
   /* align content */
   text-align: center;
   line-height: 21vh;
+
+  /* flip-animation */
+  transition: 0.5s ease-in-out;
 }
 
 .card-flipped {
