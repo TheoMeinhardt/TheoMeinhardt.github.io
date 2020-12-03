@@ -6,23 +6,29 @@ body {
   font-weight: bold;
 }
 
-.info-bar {
-  /* spacing/sizing */
-  float: left;
-  width: 23vh;
-  margin-left: 40vh;
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .info-bar > div {
   /* spacing/sizing */
   padding: 5%;
   text-align: center;
-  margin: 1vh 0vh 1vh 1vh;
+  margin: 1vh 3vh 1vh 1vh;
+  width: 20vh;
 
   /* colors/design */
   color: #2f3d74;
   background-color: #858ba7;
-  border-radius: 15px;
+  border-radius: 500px;
+}
+
+.start-button:hover {
+  /* colors/design */
+  background-color: #ffb56c;
+  color: #e37a12;
+  cursor: pointer;
 }
 
 .deck {

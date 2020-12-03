@@ -1,3 +1,14 @@
+function timer() {
+  s++;
+
+  if (s > 60) {
+    s = 0;
+    m++;
+  }
+
+  timerLabel.innerHTML = `${m}:${s}`;
+}
+
 function buildCards() {
   const container = document.querySelector("#card-deck");
   for (let i = 0; i < 16; i++) {
@@ -36,12 +47,24 @@ function labelPairs() {
   }
 }
 
+// Timer:
+let m = 0;
+let s = 0;
+
 let allFlippedCards = [];
 let pairs = [];
+let started = false;
+const timerLabel = document.querySelector(".timer");
+const startButton = document.querySelector(".start-button");
 
 buildCards();
 const allCards = document.querySelectorAll(".card");
 buildPairs();
+
+startButton.addEventListener("click", function () {
+  started = true;
+  setInterval(timer, 1000);
+});
 
 // flip/unflip cards
 for (let i = 0; i < allCards.length; i++) {
